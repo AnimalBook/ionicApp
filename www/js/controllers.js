@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('ionicApp.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -41,8 +41,8 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
+.controller('ionicAppCtrl', function($scope) {
+  $scope.playListStocks = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
     { title: 'Dubstep', id: 3 },
@@ -52,5 +52,6 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('StockCtrl', function($scope, $stateParams) {
+  $scope.viewEachItem = $stateParams.stockTicker;
 });
